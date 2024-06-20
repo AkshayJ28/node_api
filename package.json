@@ -1,28 +1,13 @@
 {
-  "name": "apiwhatsapp",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./src/index.js",
-    "build": "babel ./src --out-dir ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.19.2",
+    "https": "^1.0.0",
+    "msnodesqlv8": "^4.2.1",
     "mssql": "^11.0.0",
-    "oracledb": "^6.5.1",
-    "tedious": "^18.2.1"
+    "oracledb": "^6.5.1"
   },
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.24.7",
-    "@babel/core": "^7.24.7",
-    "@babel/preset-env": "^7.24.7"
+  "scripts": {
+    "dev": "webpack --config=Scripts/config/webpack.dev.js --watch",
+    "build": "webpack --config=Scripts/config/webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
